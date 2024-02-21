@@ -1,0 +1,70 @@
+<div id="main-footer">
+  <div class="footer-content content-width">
+    <div class="footer-left fs-24">
+      <span><span class="first-letter">Y</span>annick</span>
+      <span class="a-01" (click)="showImprint()">
+        <span *ngIf="gs.lang == 'eng'">Imprint</span>
+        <span *ngIf="gs.lang == 'ger'">Impressum</span>
+      </span>
+    </div>
+    <div>© Yannick Vaterlaus{{ thisYear }}</div>
+    <div class="social-links">
+      <a href="https://github.com/SunnyDevZH" target="_blank">
+        <img src="./assets/social_icons/icon_git.png" alt="git" />
+      </a>
+      <a href="mailto:yannick.vaterlaus@windowslive.com" target="_blank">
+        <img src="./assets/social_icons/icon_mail.png" alt="mail" />
+      </a>
+      <a href="https://www.linkedin.com/in/yannick-v-11a3072b0/" target="_blank">
+        <img src="./assets/social_icons/icon_linkedin.png" alt="linkedin" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="imprintOpen" id="imprint-container">
+  <div class="imprint-content" appCloseOutside (closeOutside)="closeImprint()">
+    <img
+      class="btn-close"
+      src="./assets/icons/icon_close.png"
+      alt="X"
+      (click)="closeImprint()"
+    />
+    Yannick Vaterlaus<br />
+    yannick.vaterlaus@windowslive.com <br />
+    Vertretungsberechtigte Person: Yannick Vaterlaus <br />
+    <br /><br />
+    Verantwortlich für den Inhalt dieser Website gemäß § 5 TMG:
+    <br /><br />
+    Yannick Vaterlaus<br />
+    E-Mail: yannick.vaterlaus@windowslive.com<br />
+    <br /><br />
+    Vertretungsberechtigte Person:<br />
+    Yannick Vaterlaus<br />
+    <br /><br />
+    Haftungshinweis:<br />
+    Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für
+    die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind
+    ausschließlich deren Betreiber verantwortlich.
+    <br /><br />
+    Urheberrecht:<br />
+    Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
+    unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung,
+    Verbreitung und jede Art der Verwertung außerhalb der Grenzen des
+    Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors
+    bzw. Erstellers.
+    <br /><br />
+    Datenschutz:<br />
+    Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener
+    Daten möglich. Soweit auf unseren Seiten personenbezogene Daten
+    (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden,
+    erfolgt dies, soweit möglich, stets auf freiwilliger Basis.
+    <br /><br />
+    Die Nutzung der im Rahmen des Impressums oder vergleichbarer Angaben
+    veröffentlichten Kontaktdaten wie Postanschriften, Telefon- und Faxnummern
+    sowie E-Mail-Adressen durch Dritte zur Übersendung von nicht ausdrücklich
+    angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen
+    die Versender von sogenannten Spam-Mails bei Verstößen gegen dieses Verbot
+    sind ausdrücklich vorbehalten.
+  </div>
+</div>

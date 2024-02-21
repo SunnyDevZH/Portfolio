@@ -1,0 +1,57 @@
+@import "src/assets/global-scss.scss";
+
+#skill-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.skill-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 200px;
+  gap: 8px;
+  width: 80px;
+  height: 80px;
+
+  padding: 16px;
+
+  white-space: nowrap;
+}
+
+.skill-element img {
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-element:hover {
+  filter: drop-shadow(0 0 16px $color01);
+}
+
+.skill-element:hover img {
+  animation: moveUp 0.5s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 992px) {
+  .skill-element {
+    flex-basis: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skill-element {
+    padding: 8px 0;
+  }
+}

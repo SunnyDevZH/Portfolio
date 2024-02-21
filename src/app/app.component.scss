@@ -1,0 +1,43 @@
+.message-box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  z-index: 1200;
+}
+
+.message-card {
+  padding: 24px 36px;
+
+  border-radius: 12px;
+  background-color: #2a3647;
+  color: #fff;
+  font-size: 1.3rem;
+  opacity: 1;
+  animation: message-fade 2s ease-in-out forwards;
+}
+
+.d-none {
+  display: none;
+}
+
+@keyframes message-fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+}

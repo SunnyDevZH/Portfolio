@@ -1,0 +1,61 @@
+@import "src/assets/global-scss.scss";
+
+.contact-01 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 32px;
+}
+
+.contact-01-01 {
+  min-width: 450px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+
+  min-width: 450px;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  width: 500px;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #4c47ff;
+  background-color: #141d2f;
+  padding: 8px 16px;
+  font-size: 10px;
+
+ 
+}
+
+::placeholder {
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .contact-01 {
+    gap: 16px;
+  }
+
+  .contact-01-01 {
+    width: 100%;
+    min-width: unset;
+  }
+
+  form {
+    width: 100%;
+    min-width: unset;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+  }
+}

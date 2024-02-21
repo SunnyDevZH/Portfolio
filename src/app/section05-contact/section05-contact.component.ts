@@ -1,0 +1,58 @@
+import { Component} from '@angular/core';
+import { AppComponent } from '../app.component';
+import { GlobalService } from '../global.service';
+import { HttpClient } from '@angular/common/http'
+
+@Component({
+  selector: 'app-section05-contact',
+  templateUrl: './section05-contact.component.html',
+  styleUrls: ['./section05-contact.component.scss'],
+})
+export class Section05ContactComponent {
+  mailTest = false;
+
+  contactData = {
+    name: '',
+    email: '',
+    message: '',
+  };
+
+  post = {
+    endPoint: 'https://yannick-vaterlaus.ch/send_mail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: any) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+          
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+        this.appComponent.showMessage('mail sended');
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      ngForm.resetForm();
+      console.log('ohne mail aber abgeschlossen');
+    }
+  }
+
+  lang: string = 'eng';
+
+  constructor(private appComponent: AppComponent, private http: HttpClient, public gs: GlobalService) {
+    this.lang = gs.lang;
+  }
+
+}

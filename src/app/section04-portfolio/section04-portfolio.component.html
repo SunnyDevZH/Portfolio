@@ -1,0 +1,145 @@
+<section>
+  <div id="section-portfolio" style="position: absolute; top: -140px"></div>
+  <div class="title-line title-right">
+    <div class="bg-line width-20p"></div>
+    <h2 class="dark-bg">Portfolio</h2>
+    <div class="bg-line width-40p"></div>
+  </div>
+
+  <div class="section-area">
+    <div class="content-width">
+      <div class="text-block">
+        <span *ngIf="gs.lang == 'eng'"
+          >Samples of my work - please feel free to try them out</span
+        >
+        <span *ngIf="gs.lang == 'ger'"
+          >Meine Projekte - jedes Projekt kann online getestet werden</span
+        >
+      </div>
+
+      <div id="project-list">
+        <div class="portfolio-card card-reverse">
+          <div class="card-img">
+            <img
+              class="img-project"
+              src="./assets/project_thumbnails/join.png"
+              alt=""
+            />
+          </div>
+          <div class="card-text">
+            <h3 class="card-title">JOIN</h3>
+            <h4 class="card-subtitle">JAVASCRIPT | HTML | CSS</h4>
+            <div class="text-block">
+              <span *ngIf="gs.lang == 'eng'">
+                Task Manager with a kanban System. Create and manage tasks.
+                Users can be set up and added to the tasks. This project is the
+                result from a team of 3 progammers.
+              </span>
+              <span *ngIf="gs.lang == 'ger'">
+                Ein Task Manager mit einem Kanban-Board. Erstelle und verwalte
+                Aufgaben. Benutzer können angelegt und Aufgaben zugewiesen
+                werden. Dieses Projekt ist das Ergebns einer Teamarbeit mit
+                insgesamt 3 Programmierern
+              </span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://yannick-vaterlaus.ch/join/index.html"
+                target="_blank"
+                class="button-01 btn-blue"
+                >Live test</a
+              >
+              <a
+                href="https://github.com/SunnyDevZH/Join"
+                target="_blank"
+                class="button-01 btn-hollow"
+                >Github</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card portfolio-divider">
+          <div class="card-img">
+            <img
+              class="img-project"
+              src="./assets/project_thumbnails/polloloco.png"
+              alt=""
+            />
+          </div>
+          <div class="card-text">
+            <h3 class="card-title">El Pollo Loco</h3>
+            <h4 class="card-subtitle">JAVASCRIPT | OOP | HTML | CSS</h4>
+            <div class="text-block">
+              <span *ngIf="gs.lang == 'eng'">
+                A funny 2D platformer game.
+                <br />
+                Get rid of all the nasty chickens and defeat EL Pollo Loco.
+              </span>
+              <span *ngIf="gs.lang == 'ger'">
+                Ein unterhaltsames 2D Jump and Run Spiel.
+                <br />
+                Überwinde die die kleinen lästigen Hühner und besiege El Pollo
+                Loco.
+              </span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://yannick-vaterlaus.ch/pollo-loco/index.html"
+                target="_blank"
+                class="button-01 btn-blue"
+                >Live test</a
+              >
+              <a
+                href="https://github.com/SunnyDevZH/Pollo-Loco"
+                target="_blank"
+                class="button-01 btn-hollow"
+                >Github</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card card-reverse portfolio-divider">
+          <div class="card-img">
+            <img
+              class="img-project"
+              src="./assets/project_thumbnails/pokedex.png"
+              alt=""
+            />
+          </div>
+          <div class="card-text">
+            <h3 class="card-title">PokeDex</h3>
+            <h4 class="card-subtitle">JAVASCRIPT | API | HTML | CSS</h4>
+            <div class="text-block">
+              <span *ngIf="gs.lang == 'eng'">
+                A database of pokemons from an API
+                <br />
+                With a view of details and stats for every pokemon
+              </span>
+              <span *ngIf="gs.lang == 'ger'">
+                Eine Datenbank mit Pokemon von einer offenen API.
+                <br />
+                Mit einer Detailanischt zu jedem Pokemon
+              </span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://yannick-vaterlaus.ch/pokedex/index.html"
+                target="_blank"
+                class="button-01 btn-blue"
+                >Live test</a
+              >
+              <a
+                href="https://github.com/SunnyDevZH/Pokedex"
+                target="_blank"
+                class="button-01 btn-hollow"
+                >Github</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

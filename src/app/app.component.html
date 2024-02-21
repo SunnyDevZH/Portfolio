@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<app-section01-hero></app-section01-hero>
+<app-section02-about></app-section02-about>
+<app-section03-skills></app-section03-skills>
+<app-section04-portfolio></app-section04-portfolio>
+<app-section05-contact></app-section05-contact>
+
+<app-footer></app-footer>
+
+<div #messageBox *ngIf="displayMessage" class="message-box">
+  <div #messageCard class="message-card">{{ myMessage }}</div>
+</div>

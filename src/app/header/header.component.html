@@ -1,0 +1,47 @@
+<section id="main-header">
+  <div class="header-content content-width">
+    <h3> Yannic <span class="first-letter-blue">k</span></h3>
+    <img
+      src="./assets/icons/menü-50.png"
+      class="menu-burger"
+      (click)="showMenu()"
+    />
+    <div id="main-menu">
+      <a class="a-01" (click)="gotoSection('section-about')">
+        <span *ngIf="gs.lang == 'eng'">About me</span>
+        <span *ngIf="gs.lang == 'ger'">Über mich</span>
+      </a>
+      <a class="a-01" (click)="gotoSection('section-skills')">Skills</a>
+      <a class="a-01" (click)="gotoSection('section-portfolio')">Portfolio</a>
+      <a class="a-01" (click)="changeLang('ger')" *ngIf="gs.lang == 'eng'">DE</a>
+      <a class="a-01" (click)="changeLang('eng')" *ngIf="gs.lang == 'ger'">EN</a>
+    </div>
+    <!-- mobile menu -->
+    <div id="mobile-menu">
+      <div class="menu-close">
+        <div class="fs-l"><span class="first-letter">Y</span>annick</div>
+        <img
+          class="menu-burger"
+          src="./assets/icons/menü-50.png"
+          alt="X"
+          (click)="closeMenu()"
+        />
+      </div>
+
+      <a class="a-01" (click)="gotoSection('section-about'); closeMenu()">
+        <span *ngIf="gs.lang == 'eng'">About me</span>
+        <span *ngIf="gs.lang == 'ger'">Über mich</span>
+      </a>
+      <a class="a-01" (click)="gotoSection('section-skills'); closeMenu()"
+        >Skills</a
+      >
+      <a class="a-01" (click)="gotoSection('section-portfolio'); closeMenu()"
+        >Portfolio</a
+      >
+
+      <a class="a-01" (click)="changeLang('ger')" *ngIf="gs.lang == 'eng'">DE</a>
+      <a class="a-01" (click)="changeLang('eng')" *ngIf="gs.lang == 'ger'">EN</a>
+      
+    </div>
+  </div>
+</section>

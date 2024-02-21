@@ -1,0 +1,31 @@
+<section>
+  <div id="section-contact" style="position: absolute; top: -140px"></div>
+  <div class="title-line">
+    <div class="bg-line width-40p"></div>
+    <h2 class="dark-bg">Contact</h2>
+    <div class="bg-line width-20p"></div>
+  </div>
+
+  <div class="section-area">
+    <div class="contact-01 content-width">
+      <div class="contact-01-01 text-block">
+        <span *ngIf="gs.lang == 'eng'">
+          Feel free to reach out for inquiries or feedback.
+          <br />
+          Look forward to hearing from you!
+        </span>
+        <span *ngIf="gs.lang == 'ger'">
+          Senden Sie mir gerne eine Anfrage oder ein Feedback.
+          <br />
+          Ich freue mich von Ihnen zu hören.
+        </span>
+      </div>
+      <form (ngsubmit)="onSubmit(contactForm)" #contactForm="ngForm" ngNativeValidate>
+        <input class="btn-blue" type="text" [(ngModel)]="contactData.name" id="name" name="name" [placeholder]="gs.lang == 'eng' ? 'name' : 'Name'" #namefield required/>
+        <input class="btn-blue" type="email" [(ngModel)]="contactData.email" id="email" name="email" [placeholder]="gs.lang == 'eng' ? 'email' : 'E-Mail'" #mailfield required/>
+        <textarea class="btn-blue" rows="5" [(ngModel)]="contactData.message" id="message" name="message" [placeholder]="gs.lang == 'eng' ? 'message' : 'Nachricht'" #messagefield required></textarea>
+        <input class="button-01 btn-blue" type="submit" value="submit" [placeholder]="gs.lang == 'eng' ? 'Send Mail' : 'Nachricht senden'" #sendbutton />
+      </form>
+    </div>
+  </div>
+</section>

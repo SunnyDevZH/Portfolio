@@ -1,0 +1,51 @@
+<section id="section-hero">
+  <div class="hero-container content-width">
+    <div class="hero-title">
+      <div>
+
+        <h2 class="hero-vertical">Hello</h2>
+        <h2 *ngIf="gs.lang == 'eng'">I am</h2>
+        <h2 *ngIf="gs.lang == 'ger'">Ich bin</h2>
+        <h2>Yannick Vaterlaus</h2>
+        <h2 class="hero-subtitle">
+          <span *ngIf="gs.lang == 'eng'">Frontend Developer</span>
+          <span *ngIf="gs.lang == 'ger'">Frontend Entwickler</span>
+        </h2>
+        <div class="h-center my-32">
+          <a class="button-01 btn-hero" (click)="gotoSection('section-contact')">
+            <span *ngIf="gs.lang == 'eng'">Let's Talk</span>
+            <span *ngIf="gs.lang == 'ger'">Kontakt</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img
+        class="img-profile"
+        src="./assets/yv_profile/Vector 4.png"
+        alt="yv_profile"
+      />
+    </div>
+    
+    <div class="hero-footer">
+      <div class="social-buttons">
+        <a class="a-01" href="https://github.com/SunnyDevZH" target="_blank">
+          <img src="./assets/social_icons/icon_git.png" alt="git" />
+        </a>
+        <a class="a-01" href="mailto:yannick.vaterlaus@windowslive.com" target="_blank">
+          <img src="./assets/social_icons/icon_mail.png" alt="mail" />
+        </a>
+        <a class="a-01" href="https://www.linkedin.com/in/yannick-v-11a3072b0/" target="_blank">
+          <img src="./assets/social_icons/icon_linkedin.png" alt="linkedin" />
+        </a>
+      </div>
+      
+      <div class="scroll-info">
+        <span class="scroll-text" *ngIf="gs.lang == 'eng'" (click)="gotoSection('section-about')" >Scroll Down</span>
+        <span class="scroll-text" *ngIf="gs.lang == 'ger'" (click)="gotoSection('section-about')" >herunterscollen</span>
+        <img class="icon-down a-01" src="./assets/buttons/down_white.png" alt="" (click)="gotoSection('section-about')" />
+      </div>
+    </div>
+    
+  </div>
+</section>
