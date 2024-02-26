@@ -22,6 +22,10 @@
   white-space: nowrap;
 }
 
+.text-block{
+  margin-left: 72px;
+}
+
 .skill-element img {
   overflow: hidden;
   position: relative;
@@ -50,8 +54,20 @@
   }
 }
 
+@media (max-width: 768px) {
+  .text-block{
+    margin-left: 40px;
+  }
+
+
+}
+
 @media (max-width: 576px) {
   .skill-element {
     padding: 8px 0;
+  }
+
+  .text-block{
+    margin-left: unset;
   }
 }

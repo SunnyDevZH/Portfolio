@@ -24,7 +24,7 @@
 }
 
 .hero-subtitle {
-  color: $color01;
+  color: $color02;
 }
 
 .hero-vertical {
@@ -34,23 +34,27 @@
   justify-content: center;
   display: flex;
   margin-left: -100px;
+  margin-top: 40px
 
 }
 
 .hero-image {
+  
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   margin-top: 50px;
 }
 
-.img-profile {
+.img-profile2 {
   height: 80vh;
-
-  margin-left: -90px;
-
-  border: 5px solid $bg01;
   border-bottom-right-radius: 50%;
+  margin-right: -300px;
+}
+.img-profile1 {
+  height: 80vh;
+  border-bottom-right-radius: 50%;
+  margin-left: -200px;
 }
 
 .hero-footer {
@@ -103,11 +107,6 @@
 @media (max-width: 768px) {
   .hero-vertical {
     display: none;
-  }
-  .hero-image {
-    display: flex;
-    justify-content: center;
-    
   }
   .img-profile {
     width: auto;

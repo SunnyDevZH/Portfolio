@@ -3,7 +3,8 @@
     <div class="hero-title">
       <div>
 
-        <h2 class="hero-vertical">Hello</h2>
+        <h2 class="hero-vertical" *ngIf="gs.lang == 'eng'">Hello</h2>
+        <h2 class="hero-vertical" *ngIf="gs.lang == 'ger'">Hallo</h2>
         <h2 *ngIf="gs.lang == 'eng'">I am</h2>
         <h2 *ngIf="gs.lang == 'ger'">Ich bin</h2>
         <h2>Yannick Vaterlaus</h2>
@@ -20,11 +21,8 @@
       </div>
     </div>
     <div class="hero-image">
-      <img
-        class="img-profile"
-        src="./assets/yv_profile/Vector 4.png"
-        alt="yv_profile"
-      />
+      <img  class="img-profile1" src="./assets/yv_profile/Vector 4.png"  alt="yv_profile"/>
+      <img  class="img-profile2" src="./assets/shadows/shadow_01.png"  alt="yv_profile"/>
     </div>
     
     <div class="hero-footer">

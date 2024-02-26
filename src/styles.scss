@@ -15,7 +15,7 @@ body {
   background-color: $bg01;
   color: white;
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.4;
 }
 
@@ -171,7 +171,7 @@ font-size: 25px;
 
 .btn-hero {
   color: white;
-  background-color: $color02;
+  background-color: rgb(1,184,226);
   transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
@@ -264,7 +264,7 @@ font-size: 25px;
 
 @media (max-width: 1540px) {
   .content-width {
-    width: 90%;
+    width: 100%;
   }
 }
 
