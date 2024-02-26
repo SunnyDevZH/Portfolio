@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 130px;
-  margin: 32px;
+  margin: 40px;
 }
 
 .shadow{
@@ -47,7 +47,7 @@
   min-width: 450px;
   gap: 16px;
   font-size: 14px;
-  margin-top: -100px;
+  margin-top: -40px;
 }
 
 .about-01-02 {
@@ -89,7 +89,6 @@
 @media (max-width: 992px) {
   .about-01-01 {
     justify-content: center;
-    margin-top: unset;
   }
 
 }
@@ -97,6 +96,10 @@
 @media (max-width: 850px) {
   .section-area-about{
     display: block;
+  }
+
+  .about-01-01 {
+    margin-top: unset;
   }
 
   .shadow{
@@ -123,11 +126,13 @@
 @media (max-width: 576px) {
   .about-01-01 {
     min-width: unset;
+    text-align: center;
   }
 
   .about-01-02 {
     min-width: unset;
   }
+
 
   .benefit-container {
     flex-direction: column;

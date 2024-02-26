@@ -15,7 +15,7 @@
           Look forward to hearing from you!
         </span>
         <span *ngIf="gs.lang == 'ger'">
-          Senden Sie mir gerne eine Anfrage oder ein Feedback.
+          Senden Sie mir eine Anfrage oder ein Feedback.
           <br />
           Ich freue mich von Ihnen zu hören.
         </span>
@@ -25,7 +25,65 @@
         <input class="btn-blue" type="email" [(ngModel)]="contactData.email" id="email" name="email" [placeholder]="gs.lang == 'eng' ? 'email' : 'E-Mail'" #mailfield required/>
         <textarea class="btn-blue" rows="5" [(ngModel)]="contactData.message" id="message" name="message" [placeholder]="gs.lang == 'eng' ? 'message' : 'Nachricht'" #messagefield required></textarea>
         <input class="button-01 btn-blue" type="submit" [value]="gs.lang == 'eng' ? 'Send Mail' : 'Nachricht senden'" #sendbutton />
+        <div class="checkbox-container">
+          <input type="checkbox" id="privacyCheckbox" name="privacyCheckbox" required>
+          <label for="privacyCheckbox">{{ gs.lang == 'eng' ? 'I have read and agree to the ' : 'Ich habe die ' }}
+              <a class="link" (click)="showprivacy()" target="_blank">
+                  {{ gs.lang == 'eng' ? 'privacy policy' : 'Datenschutzrichtlinie gelesen und bin einverstanden' }}
+              </a>
+          </label>
+      </div>
       </form>
     </div>
   </div>
 </section>
+<div *ngIf="privacyOpen" id="imprint-container">
+  <div class="imprint-content" appCloseOutside (closeOutside)="closeprivacy()">
+    <img class="btn-close" src="./assets/icons/icon_close.png" alt="X" (click)="closeprivacy()"/>
+    <article>
+
+  Datenschutzerklärung <br><br>
+
+    Als Privatperson respektiere ich Ihre Privatsphäre und setze mich für den Schutz Ihrer persönlichen Daten ein. Diese Datenschutzerklärung informiert Sie darüber, welche personenbezogenen Daten ich erhebe, wie ich sie nutze und schütze.
+
+    <br><br>
+
+    1. Erhobene Daten: <br>
+    Ich erhebe nur die notwendigen Informationen, die Sie mir freiwillig zur Verfügung stellen. Dies kann Ihren Namen, Ihre E-Mail-Adresse und andere relevante Kontaktdaten umfassen.
+
+    <br><br>
+
+    2. Nutzung der Daten: <br>
+    Die von Ihnen bereitgestellten Daten werden nur zu dem Zweck verwendet, für den Sie sie zur Verfügung gestellt haben. Dies kann die Beantwortung von Anfragen, die Bereitstellung von Dienstleistungen oder die Erfüllung anderer von Ihnen angeforderter Aufgaben umfassen.
+
+    <br><br>
+
+    3. Schutz der Daten: <br>
+    Ich ergreife angemessene Sicherheitsmaßnahmen, um Ihre personenbezogenen Daten zu schützen und unbefugten Zugriff, Nutzung oder Offenlegung zu verhindern.
+
+    <br><br>
+
+    4. Weitergabe von Daten: <br>
+    Ihre Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben, es sei denn, dies ist gesetzlich vorgeschrieben.
+
+    <br><br>
+
+    5. Speicherung der Daten: <br>
+    Ihre Daten werden nur so lange gespeichert, wie es für den vorgesehenen Zweck erforderlich ist oder wie es gesetzlich vorgeschrieben ist.
+
+    <br><br>
+
+    6. Ihre Rechte: <br>
+    Sie haben das Recht, auf Ihre gespeicherten Daten zuzugreifen, sie zu korrigieren, zu löschen oder die Verarbeitung einzuschränken. Bitte kontaktieren Sie mich dazu unter <a href="mailto:yannick.vaterlaus@windowslive.com">yannick.vaterlaus@windowslive.com</a>.
+
+    <br><br>
+
+    7. Änderungen der Datenschutzerklärung: <br>
+    Diese Datenschutzerklärung kann von Zeit zu Zeit aktualisiert werden. Die aktuelle Version wird auf der Website veröffentlicht.
+
+    <br><br>
+
+    Datum der letzten Aktualisierung: <time datetime="2024-02-26">26. Februar 2024</time>
+
+    </article>
+  </div>

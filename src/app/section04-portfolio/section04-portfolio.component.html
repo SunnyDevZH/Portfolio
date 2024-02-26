@@ -9,14 +9,9 @@
   <div class="section-area">
     <div class="content-width">
       <div class="text-block">
-        <span *ngIf="gs.lang == 'eng'"
-          >Samples of my work - please feel free to try them out</span
-        >
-        <span *ngIf="gs.lang == 'ger'"
-          >Meine Projekte - jedes Projekt kann online getestet werden</span
-        >
+        <p *ngIf="gs.lang == 'eng'">Samples of my work - please feel free to try them out</p>
+        <p *ngIf="gs.lang == 'ger'">Meine Projekte - jedes Projekt kann online getestet werden</p>
       </div>
-
       <div id="project-list">
         <div class="portfolio-card card-reverse">
           <div class="card-img">

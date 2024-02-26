@@ -7,6 +7,10 @@
   gap: 16px;
 }
 
+.text-block{
+  text-align: center;
+}
+
 .skill-element {
   display: flex;
   flex-direction: column;
@@ -20,10 +24,6 @@
   padding: 16px;
 
   white-space: nowrap;
-}
-
-.text-block{
-  margin-left: 72px;
 }
 
 .skill-element img {

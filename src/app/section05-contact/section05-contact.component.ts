@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class Section05ContactComponent {
   mailTest = false;
+  privacyOpen = false;
 
   contactData = {
     name: '',
@@ -53,6 +54,20 @@ export class Section05ContactComponent {
 
   constructor(private appComponent: AppComponent, private http: HttpClient, public gs: GlobalService) {
     this.lang = gs.lang;
+  }
+
+
+  showprivacy() {
+    event?.stopPropagation();
+    if (!this.privacyOpen) {
+      this.privacyOpen = true;
+    }
+  }
+
+  closeprivacy() {
+    if (this.privacyOpen) {
+      this.privacyOpen = false;
+    }
   }
 
 }
