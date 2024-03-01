@@ -29,6 +29,7 @@ textarea {
   padding: 8px 16px;
   font-size: 10px;
   font-family: 'Poppins', sans-serif;
+  cursor: pointer;
 
  
 }
@@ -65,6 +66,20 @@ textarea {
   z-index: 999;
 }
 
+
+
+.scroll-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-down {
+  width: 36px;
+  height: 36px;
+}
+
 .btn-close {
   position: absolute;
   top: 20px;
@@ -74,6 +89,20 @@ textarea {
   height: 20px;
 
   cursor: pointer;
+}
+
+.btn-send{
+  color: white;
+  background-color: rgb(1,184,226);
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out,;
+  border-style: none;
+}
+
+.btn-disabled {
+  border-style: none;
+  background-color: #cccccc; 
+  color: #666666; 
+  cursor: not-allowed; 
 }
 
 .imprint-content {

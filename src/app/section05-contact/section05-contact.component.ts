@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { AppComponent } from '../app.component';
 import { GlobalService } from '../global.service';
 import { HttpClient } from '@angular/common/http'
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-section05-contact',
@@ -43,7 +44,7 @@ export class Section05ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-        this.appComponent.showMessage('mail sended');
+        this.appComponent.showMessage('mail send');
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
       console.log('ohne mail aber abgeschlossen');
@@ -52,7 +53,7 @@ export class Section05ContactComponent {
 
   lang: string = 'eng';
 
-  constructor(private appComponent: AppComponent, private http: HttpClient, public gs: GlobalService) {
+  constructor(private scroller: ViewportScroller, private appComponent: AppComponent, private http: HttpClient, public gs: GlobalService) {
     this.lang = gs.lang;
   }
 
@@ -68,6 +69,10 @@ export class Section05ContactComponent {
     if (this.privacyOpen) {
       this.privacyOpen = false;
     }
+  }
+
+  gotoSection(section: string) {
+    this.scroller.scrollToAnchor(section);
   }
 
 }

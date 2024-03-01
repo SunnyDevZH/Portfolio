@@ -20,7 +20,6 @@
           </span>
         </p>
       </div>
-
       <div id="skill-list">
         <div class="skill-element">
           <img src="./assets/skill_icons/skill_angular.png" alt="" />
@@ -62,6 +61,12 @@
           <img src="./assets/skill_icons/skill_materialdesign.png" alt="" />
           <span>Material Design</span>
         </div>
+      </div>
+      <div class="h-center my-32">
+        <a class="button-01 btn-hero" (click)="gotoSection('section-contact')">
+          <span *ngIf="gs.lang == 'eng'">Get in touch</span>
+          <span *ngIf="gs.lang == 'ger'">Kontakt</span>
+        </a>
       </div>
     </div>
   </div>

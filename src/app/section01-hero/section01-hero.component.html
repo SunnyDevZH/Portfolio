@@ -2,11 +2,8 @@
   <div class="hero-container content-width">
     <div class="hero-title">
       <div>
-
-        <h2 class="hero-vertical" *ngIf="gs.lang == 'eng'">Hello</h2>
-        <h2 class="hero-vertical" *ngIf="gs.lang == 'ger'">Hallo</h2>
-        <h2 *ngIf="gs.lang == 'eng'">I am</h2>
-        <h2 *ngIf="gs.lang == 'ger'">Ich bin</h2>
+        <h2 class="hero-vertical" *ngIf="gs.lang == 'eng'">I am</h2>
+        <h2 class="hero-vertical" *ngIf="gs.lang == 'ger'">Ich bin</h2>
         <h2>Yannick Vaterlaus</h2>
         <h2 class="hero-subtitle">
           <span *ngIf="gs.lang == 'eng'">Frontend Developer</span>
@@ -37,7 +34,6 @@
           <img src="./assets/social_icons/icon_linkedin.png" alt="linkedin" />
         </a>
       </div>
-      
       <div class="scroll-info">
         <span class="scroll-text" *ngIf="gs.lang == 'eng'" (click)="gotoSection('section-about')" >Scroll Down</span>
         <span class="scroll-text" *ngIf="gs.lang == 'ger'" (click)="gotoSection('section-about')" >herunterscollen</span>

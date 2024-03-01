@@ -60,11 +60,8 @@ p {
 
 section {
   overflow: hidden;
-
   position: relative;
-
   padding-top: 0;
-  padding-bottom: 32px;
 }
 
 
@@ -158,10 +155,8 @@ font-size: 25px;
 // basic button
 .button-01 {
   min-width: 90px;
-
   padding: 12px 24px;
-
-  border: 2px solid white;
+ 
   border-radius: 8px;
   text-decoration: none;
   color: #fff;
@@ -172,11 +167,12 @@ font-size: 25px;
 .btn-hero {
   color: white;
   background-color: rgb(1,184,226);
-  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out,;
 }
 
 .btn-hero:hover {
   transform: scale(1.2);
+  border: 2px solid white;
   background-color: unset;
 }
 
@@ -279,7 +275,6 @@ font-size: 25px;
 @media (max-width: 576px) {
   section {
     padding-top: 0;
-    padding-bottom: 32px;
   }
 
   h2 {

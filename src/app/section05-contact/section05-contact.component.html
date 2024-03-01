@@ -21,18 +21,23 @@
         </span>
       </div>
       <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" ngNativeValidate>
-        <input class="btn-blue" type="text" [(ngModel)]="contactData.name" id="name" name="name" [placeholder]="gs.lang == 'eng' ? 'name' : 'Name'" #namefield required/>
-        <input class="btn-blue" type="email" [(ngModel)]="contactData.email" id="email" name="email" [placeholder]="gs.lang == 'eng' ? 'email' : 'E-Mail'" #mailfield required/>
-        <textarea class="btn-blue" rows="5" [(ngModel)]="contactData.message" id="message" name="message" [placeholder]="gs.lang == 'eng' ? 'message' : 'Nachricht'" #messagefield required></textarea>
-        <input class="button-01 btn-blue" type="submit" [value]="gs.lang == 'eng' ? 'Send Mail' : 'Nachricht senden'" #sendbutton />
+        <input class="btn-blue" type="text" [(ngModel)]="contactData.name" id="name" name="name" [placeholder]="gs.lang == 'eng' ? 'name' : 'Name'" #namefield="ngModel" required />
+        <input class="btn-blue" type="email" [(ngModel)]="contactData.email" id="email" name="email" [placeholder]="gs.lang == 'eng' ? 'email' : 'E-Mail'" #mailfield="ngModel" required />
+        <textarea class="btn-blue" rows="5" [(ngModel)]="contactData.message" id="message" name="message" [placeholder]="gs.lang == 'eng' ? 'message' : 'Nachricht'" #messagefield="ngModel" required></textarea>
         <div class="checkbox-container">
-          <input type="checkbox" id="privacyCheckbox" name="privacyCheckbox" required>
+          <input type="checkbox" id="privacyCheckbox" name="privacyCheckbox" required >
           <label for="privacyCheckbox">{{ gs.lang == 'eng' ? 'I have read and agree to the ' : 'Ich habe die ' }}
-              <a class="link" (click)="showprivacy()" target="_blank">
-                  {{ gs.lang == 'eng' ? 'privacy policy' : 'Datenschutzrichtlinie gelesen und bin einverstanden' }}
-              </a>
+            <a class="link" (click)="showprivacy()" target="_blank">
+              {{ gs.lang == 'eng' ? 'privacy policy' : 'Datenschutzrichtlinie gelesen und bin einverstanden' }}
+            </a>
           </label>
-      </div>
+        </div>
+        <input class="btn-hero btn-blue btn-send" type="submit" [value]="gs.lang == 'eng' ? 'Send Mail' : 'Nachricht senden'" [class.btn-disabled]="!contactForm.valid" [disabled]="!contactForm.valid" #sendbutton />
+        <div class="scroll-info">
+          <span class="scroll-text" *ngIf="gs.lang == 'eng'" (click)="gotoSection('section-hero')" >Scroll up</span>
+          <span class="scroll-text" *ngIf="gs.lang == 'ger'" (click)="gotoSection('section-hero')" >hochscrollen</span>
+          <img class="icon-down a-01" src="./assets/buttons/up_white.png" alt="" (click)="gotoSection('section-hero')" />
+        </div>
       </form>
     </div>
   </div>
