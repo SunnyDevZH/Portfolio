@@ -26,6 +26,12 @@
   white-space: nowrap;
 }
 
+.btn-hero{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .skill-element img {
   overflow: hidden;
   position: relative;

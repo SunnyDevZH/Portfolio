@@ -72,8 +72,8 @@ span{
   gap: 16px;
 }
 
-.about-02 {
-  flex: 1;
+.content-width {
+  width: unset;
 }
 
 .benefit-container {
@@ -84,6 +84,7 @@ span{
 .icon-benefit {
   margin-right: 32px;
   height: 40px;
+  width: 40px;
 }
 
 .img-profile-head {

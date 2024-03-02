@@ -132,6 +132,7 @@ font-size: 25px;
 .h-center {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .section-area {
@@ -156,7 +157,6 @@ font-size: 25px;
 .button-01 {
   min-width: 90px;
   padding: 12px 24px;
- 
   border-radius: 8px;
   text-decoration: none;
   color: #fff;
@@ -171,10 +171,12 @@ font-size: 25px;
 }
 
 .btn-hero:hover {
-  transform: scale(1.2);
-  border: 2px solid white;
+  border: 1px solid white;
   background-color: unset;
 }
+
+
+
 
 .btn-blue {
   background-color: $color02;

@@ -4,7 +4,7 @@
   overflow-x: hidden;
   display: flex;
   justify-content: center;
-  padding-top: 10vh;
+  height: 100vh;
 }
 
 h2{
@@ -32,6 +32,11 @@ h2{
   color: $color02;
 }
 
+.btn-hero:hover {
+  border: 1px solid white;
+  background-color: unset;
+}
+
 .hero-vertical {
   rotate: 270deg;
   position: absolute;
@@ -40,7 +45,30 @@ h2{
   display: flex;
   margin-left: -100px;
   margin-top: 40px
+}
 
+.btn-hero {
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(1,184,226);
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out,;
+}
+
+.hero-vertical1 {
+  rotate: 270deg;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: -130px;
+  margin-top: 40px
+}
+
+.my-32:hover {
+  transform: scale(1.2);
+  transform-origin: center;
 }
 
 .hero-image {
@@ -65,15 +93,15 @@ h2{
 .hero-footer {
   position: absolute;
   bottom: 0px;
-  right: 20px;
-  left: 20px;
+  right: 0px;
+  left: 0px;
   padding: 32px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   height: 50px;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .social-buttons {

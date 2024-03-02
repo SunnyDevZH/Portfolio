@@ -3,7 +3,7 @@
     <div class="hero-title">
       <div>
         <h2 class="hero-vertical" *ngIf="gs.lang == 'eng'">I am</h2>
-        <h2 class="hero-vertical" *ngIf="gs.lang == 'ger'">Ich bin</h2>
+        <h2 class="hero-vertical1" *ngIf="gs.lang == 'ger'">Ich bin</h2>
         <h2>Yannick Vaterlaus</h2>
         <h2 class="hero-subtitle">
           <span *ngIf="gs.lang == 'eng'">Frontend Developer</span>
@@ -22,7 +22,7 @@
       <img  class="img-profile2" src="./assets/shadows/shadow_01.png"  alt="yv_profile"/>
     </div>
     
-    <div class="hero-footer">
+    <div class="hero-footer ">
       <div class="social-buttons">
         <a class="a-01" href="https://github.com/SunnyDevZH" target="_blank">
           <img src="./assets/social_icons/icon_git.png" alt="git" />
@@ -40,6 +40,5 @@
         <img class="icon-down a-01" src="./assets/buttons/down_white.png" alt="" (click)="gotoSection('section-about')" />
       </div>
     </div>
-    
   </div>
 </section>
