@@ -13,8 +13,15 @@
       </a>
       <a class="a-01" (click)="gotoSection('section-skills')">Skills</a>
       <a class="a-01" (click)="gotoSection('section-portfolio')">Portfolio</a>
+      <div class="a-02">
+        <a class="a-01" (click)="togglePasswordInput()" id="cvLink">CV</a>
+        <div class="cv">
+          <input style="width: 60px;" type="password" [(ngModel)]="password" id="passwordInput" class="input" placeholder="Passwort" (input)="checkPassword()">
+        </div>
+      </div>
       <a class="a-01" (click)="changeLang('ger')" *ngIf="gs.lang == 'eng'">DE</a>
       <a class="a-01" (click)="changeLang('eng')" *ngIf="gs.lang == 'ger'">EN</a>
+      
     </div>
     <!-- mobile menu -->
     <div id="mobile-menu">

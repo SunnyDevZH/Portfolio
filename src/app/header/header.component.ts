@@ -33,4 +33,32 @@ export class HeaderComponent {
   changeLang(newLang: string) {
     this.gs.lang = newLang;
   }
+
+   togglePasswordInput(): void {
+    const passwordInput = document.getElementById('passwordInput') as HTMLInputElement;
+
+    passwordInput.classList.toggle('visible');
+
+    if (passwordInput.classList.contains('visible')) {
+        passwordInput.style.opacity = '1';
+    } else {
+        passwordInput.style.opacity = '0';
+    }
+
+    
+  }
+
+password: string = '';
+correctPassword: string = 'job'; // Setze hier dein korrektes Passwort
+
+checkPassword(): void {
+  if (this.password === this.correctPassword) {
+    window.open('./../../assets/CV.pdf');
+    this.password = '';
+    this.togglePasswordInput();
+  }
+}
+
+
+ 
 }
