@@ -34,8 +34,8 @@
         </div>
         <input class="btn-hero btn-blue btn-send" type="submit" [value]="gs.lang == 'eng' ? 'Send Mail' : 'Nachricht senden'" [class.btn-disabled]="!contactForm.valid" [disabled]="!contactForm.valid" #sendbutton />
         <div class="scroll-info">
-          <span class="scroll-text" *ngIf="gs.lang == 'eng'" (click)="gotoSection('section-hero')" >Scroll up</span>
-          <span class="scroll-text" *ngIf="gs.lang == 'ger'" (click)="gotoSection('section-hero')" >hochscrollen</span>
+          <span class="scroll-text" *ngIf="gs.lang == 'eng'" (click)="gotoSection('section-hero')" >Scroll Up</span>
+          <span class="scroll-text" *ngIf="gs.lang == 'ger'" (click)="gotoSection('section-hero')" >Hochscrollen</span>
           <img class="icon-down a-01" src="./assets/buttons/up_white.png" alt="" (click)="gotoSection('section-hero')" />
         </div>
       </form>
