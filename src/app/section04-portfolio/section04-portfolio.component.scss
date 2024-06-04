@@ -26,6 +26,9 @@
 
   min-width: 350px;
   max-width: 45%;
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .card-subtitle {
