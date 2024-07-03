@@ -18,6 +18,12 @@ h2{
   padding-bottom: 32px;
 }
 
+.space{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
 .hero-title {
   position: absolute;
   align-items: center;
