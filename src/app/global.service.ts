@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class GlobalService {
-  lang: string = 'eng';
+  lang: string = 'ger';
 
   constructor() {}
 }
