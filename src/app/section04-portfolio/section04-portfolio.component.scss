@@ -54,6 +54,29 @@
   gap: 16px;
 }
 
+.project-links .button-01 {
+  min-width: 160px;
+  border-radius: 12px;
+  transition: all 200ms ease-out;
+}
+
+.project-links .button-01:hover {
+  transform: scale(1.02);
+}
+
+.project-links .button-01:active {
+  transform: scale(0.98);
+}
+
+.project-links .button-01:focus {
+  outline: none;
+}
+
+.project-links .button-01:focus-visible {
+  outline: 2px solid $color01;
+  outline-offset: 3px;
+}
+
 @media (max-width: 800px) {
   #project-list:first-child {
     border: unset !important;

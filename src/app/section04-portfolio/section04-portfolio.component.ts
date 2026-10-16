@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 import { GlobalService } from '../global.service';
 
 
@@ -10,7 +11,11 @@ import { GlobalService } from '../global.service';
 export class Section04PortfolioComponent {
   lang: string = 'eng';
 
-  constructor(public gs: GlobalService) {
+  constructor(private scroller: ViewportScroller, public gs: GlobalService) {
     this.lang = gs.lang;
+  }
+
+  gotoSection(section: string) {
+    this.scroller.scrollToAnchor(section);
   }
 }

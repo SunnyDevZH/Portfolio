@@ -39,17 +39,22 @@
             </div>
             <div class="project-links">
               <a
-                href="https://yannick-vaterlaus.ch/join/index.html"
-                target="_blank"
-                class="button-01 btn-blue"
-                >Live test</a
-              >
-              <a
                 href="https://github.com/SunnyDevZH/Join"
                 target="_blank"
-                class="button-01 btn-hollow"
-                >Github</a
+                rel="noopener noreferrer"
+                class="button-01 btn-blue"
               >
+                <span *ngIf="gs.lang == 'ger'">Code auf Github</span>
+                <span *ngIf="gs.lang == 'eng'">Code on Github</span>
+              </a>
+              <a
+                href="#section-contact"
+                class="button-01 btn-hollow"
+                (click)="gotoSection('section-contact')"
+              >
+                <span *ngIf="gs.lang == 'ger'">Projekt besprechen</span>
+                <span *ngIf="gs.lang == 'eng'">Discuss project</span>
+              </a>
             </div>
           </div>
         </div>
@@ -80,17 +85,22 @@
             </div>
             <div class="project-links">
               <a
-                href="https://yannick-vaterlaus.ch/pollo-loco/index.html"
-                target="_blank"
-                class="button-01 btn-blue"
-                >Live test</a
-              >
-              <a
                 href="https://github.com/SunnyDevZH/Pollo-Loco"
                 target="_blank"
-                class="button-01 btn-hollow"
-                >Github</a
+                rel="noopener noreferrer"
+                class="button-01 btn-blue"
               >
+                <span *ngIf="gs.lang == 'ger'">Code auf Github</span>
+                <span *ngIf="gs.lang == 'eng'">Code on Github</span>
+              </a>
+              <a
+                href="#section-contact"
+                class="button-01 btn-hollow"
+                (click)="gotoSection('section-contact')"
+              >
+                <span *ngIf="gs.lang == 'ger'">Projekt besprechen</span>
+                <span *ngIf="gs.lang == 'eng'">Discuss project</span>
+              </a>
             </div>
           </div>
         </div>
@@ -119,17 +129,22 @@
             </div>
             <div class="project-links">
               <a
-                href="https://yannick-vaterlaus.ch/pokedex/index.html"
-                target="_blank"
-                class="button-01 btn-blue"
-                >Live test</a
-              >
-              <a
                 href="https://github.com/SunnyDevZH/Pokedex"
                 target="_blank"
-                class="button-01 btn-hollow"
-                >Github</a
+                rel="noopener noreferrer"
+                class="button-01 btn-blue"
               >
+                <span *ngIf="gs.lang == 'ger'">Code auf Github</span>
+                <span *ngIf="gs.lang == 'eng'">Code on Github</span>
+              </a>
+              <a
+                href="#section-contact"
+                class="button-01 btn-hollow"
+                (click)="gotoSection('section-contact')"
+              >
+                <span *ngIf="gs.lang == 'ger'">Projekt besprechen</span>
+                <span *ngIf="gs.lang == 'eng'">Discuss project</span>
+              </a>
             </div>
           </div>
         </div>
@@ -158,17 +173,22 @@
             </div>
             <div class="project-links">
               <a
-                href="https://yannick-vaterlaus.ch/dabubble/"
-                target="_blank"
-                class="button-01 btn-blue"
-                >Live test</a
-              >
-              <a
                 href="https://github.com/SunnyDevZH/DaBubble"
                 target="_blank"
-                class="button-01 btn-hollow"
-                >Github</a
+                rel="noopener noreferrer"
+                class="button-01 btn-blue"
               >
+                <span *ngIf="gs.lang == 'ger'">Code auf Github</span>
+                <span *ngIf="gs.lang == 'eng'">Code on Github</span>
+              </a>
+              <a
+                href="#section-contact"
+                class="button-01 btn-hollow"
+                (click)="gotoSection('section-contact')"
+              >
+                <span *ngIf="gs.lang == 'ger'">Projekt besprechen</span>
+                <span *ngIf="gs.lang == 'eng'">Discuss project</span>
+              </a>
             </div>
           </div>
         </div>
@@ -195,17 +215,22 @@
             </div>
             <div class="project-links">
               <a
-                href="https://yannick-vaterlaus.ch/videoflix/login"
-                target="_blank"
-                class="button-01 btn-blue"
-                >Live test</a
-              >
-              <a
                 href="https://github.com/SunnyDevZH/Videoflix-Backend"
                 target="_blank"
-                class="button-01 btn-hollow"
-                >Github</a
+                rel="noopener noreferrer"
+                class="button-01 btn-blue"
               >
+                <span *ngIf="gs.lang == 'ger'">Code auf Github</span>
+                <span *ngIf="gs.lang == 'eng'">Code on Github</span>
+              </a>
+              <a
+                href="#section-contact"
+                class="button-01 btn-hollow"
+                (click)="gotoSection('section-contact')"
+              >
+                <span *ngIf="gs.lang == 'ger'">Projekt besprechen</span>
+                <span *ngIf="gs.lang == 'eng'">Discuss project</span>
+              </a>
             </div>
           </div>
         </div>
@@ -223,32 +248,75 @@
             <h4 class="card-subtitle">TYPESCRIPT | ANGULAR | FIREBASE | SCSS</h4>
             <div class="text-block">
               <span *ngIf="gs.lang == 'eng'">
-                With this app you can create, edit, and delete notes.
-                <br />
-                The data is stored in the backend using Firebase.
+                With this app you can create, edit, and delete notes. The data is stored in the backend using Firebase.
               </span>
               <span *ngIf="gs.lang == 'ger'">
-                Mit dieser App kannst du Notizen erstellen, bearbeiten und löschen.
-                <br />
-                Die Daten werden im Backend mit Firebase gespeichert.
+                Mit dieser App kannst du Notizen erstellen, bearbeiten und löschen. Die Daten werden im Backend mit Firebase gespeichert.
               </span>
             </div>
             <div class="project-links">
               <a
-                href="https://yannick-vaterlaus.ch/notes/"
-                target="_blank"
-                class="button-01 btn-blue"
-                >Live test</a
-              >
-              <a
                 href="https://github.com/SunnyDevZH/DA-Notes"
                 target="_blank"
-                class="button-01 btn-hollow"
-                >Github</a
+                rel="noopener noreferrer"
+                class="button-01 btn-blue"
               >
+                <span *ngIf="gs.lang == 'ger'">Code auf Github</span>
+                <span *ngIf="gs.lang == 'eng'">Code on Github</span>
+              </a>
+              <a
+                href="#section-contact"
+                class="button-01 btn-hollow"
+                (click)="gotoSection('section-contact')"
+              >
+                <span *ngIf="gs.lang == 'ger'">Projekt besprechen</span>
+                <span *ngIf="gs.lang == 'eng'">Discuss project</span>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+         <div class="portfolio-card card-reverse">
+          <div class="card-img">
+            <img
+              class="img-project"
+              src="./assets/project_thumbnails/ai-roboter.png"
+              alt=""
+            />
+          </div>
+          <div class="card-text">
+            <h3 class="card-title">AI-Chat-Roboter</h3>
+            <h4 class="card-subtitle">Flask | Python | HTML | CSS | AI-API | Gemini-2.5-Flash </h4>
+            <div class="text-block">
+              <span *ngIf="gs.lang == 'eng'">
+                AI-powered chat application using Flask and integration of the Gemini 2.5 Flash API. Provides fast, context-aware responses through a modern HTML und CSS frontend.
+              </span>
+              <span *ngIf="gs.lang == 'ger'">
+                KI-gestützte Chat-Anwendung mit Flask und Integration der Gemini 2.5 Flash API. Bietet schnelle, kontextbezogene Antworten über ein modernes HTML und CSS-Frontend.
+              </span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/SunnyDevZH/AI-Chat-Roboter"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button-01 btn-blue"
+              >
+                <span *ngIf="gs.lang == 'ger'">Code auf Github</span>
+                <span *ngIf="gs.lang == 'eng'">Code on Github</span>
+              </a>
+              <a
+                href="#section-contact"
+                class="button-01 btn-hollow"
+                (click)="gotoSection('section-contact')"
+              >
+                <span *ngIf="gs.lang == 'ger'">Projekt besprechen</span>
+                <span *ngIf="gs.lang == 'eng'">Discuss project</span>
+              </a>
             </div>
           </div>
         </div>
+
         
 
       </div>
