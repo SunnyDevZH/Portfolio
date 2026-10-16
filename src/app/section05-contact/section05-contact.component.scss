@@ -13,6 +13,40 @@
   text-align: center;
 }
 
+.contact-studio-note {
+  margin: 16px auto 0;
+  max-width: 28rem;
+  font-size: inherit;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.contact-studio-link {
+  color: $color01;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: all 200ms ease-out;
+}
+
+.contact-studio-link:hover {
+  color: #5eead4;
+  transform: scale(1.02);
+}
+
+.contact-studio-link:active {
+  transform: scale(0.98);
+}
+
+.contact-studio-link:focus {
+  outline: none;
+}
+
+.contact-studio-link:focus-visible {
+  outline: 2px solid $color01;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 form {
   display: flex;
   flex-direction: column;

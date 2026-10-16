@@ -19,6 +19,17 @@
           <br />
           Ich freue mich von Ihnen zu hören.
         </span>
+        <p class="contact-studio-note">
+          Check auch die Webseite
+          <a
+            class="link contact-studio-link"
+            href="https://www.devupstudio.ch"
+            target="_blank"
+            rel="noopener noreferrer"
+            >www.devupstudio.ch</a
+          >
+          aus, dort entwickle ich echte Projekte mit meinem Team.
+        </p>
       </div>
       <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" ngNativeValidate>
         <input class="btn-blue" type="text" [(ngModel)]="contactData.name" id="name" name="name" [placeholder]="gs.lang == 'eng' ? 'name' : 'Name'" #namefield="ngModel" required />
