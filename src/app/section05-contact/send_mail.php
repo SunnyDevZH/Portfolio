@@ -23,7 +23,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $name = str_replace(array("\r", "\n"), '', (string)($params->name ?? ''));
             $message = (string)($params->message ?? '');
 
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL) || $name === '' || $message === '') {
+            if ($name === '') {
+                $name = 'Unbekannt';
+            }
+
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL) || $message === '') {
                 http_response_code(400);
                 exit;
             }
